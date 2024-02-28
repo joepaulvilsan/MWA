@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Online Bus Ticket Booking</title>
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden; /* Prevent horizontal scroll */
+        }
+
+        #video-container {
+            position: relative;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -1;
+        }
+
+        header {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.5);
+            color: white;
+            padding: 10px 20px;
+            font-size: 24px;
+        }
+
+        .button-container {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+
+        .button-container button {
+            margin: 10px;
+            padding: 10px 20px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button-container button:hover {
+            background-color: #555;
+        }
+
+        #welcome-text {
+            position: absolute;
+            top: 60%;
+            left: 50%;
+            transform: translateX(-50%);
+            color: white;
+            font-size: 24px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Background Video -->
+    <div id="video-container">
+        <video autoplay muted loop>
+            <source src="Video by Engin Akyurt from Pexels: https://www.pexels.com/video/multi-colored-vapor-1943483/" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+
+        <!-- Header -->
+        <header>
+            Bus Booking Website
+        </header>
+
+        <!-- Button Container -->
+        <div class="button-container">
+            <button onclick="window.location.href='booking.html'">Home</button>
+            <button onclick="window.location.href='book.html'">Ticket Booking</button>
+            <button onclick="window.location.href='about.html'">About</button>
+        </div>
+
+        <!-- Welcome Text -->
+        <div id="welcome-text">
+            Welcome to our website
+        </div>
+    </div>
+</body>
+
+</html>
