@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Ticket Booking</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <style>
+        /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+        } */
+
+        form h2 {
+            margin-bottom: 20px;
+        }
+
+        form {
+            background-color: white;
+            padding: 20px 20px 20px 20px;
+            border-radius: 10px 10px 10px 10px;
+            width: 50%;
+            margin: auto;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        form input,
+        form select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        form button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        form button[type="reset"] {
+            background-color: #6c757d;
+            margin-left: 10px;
+        }
+
+        .gender-input {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .gender-label {
+            margin-right: 10px;
+        }
+
+        .gmail-suffix,
+        .phone-prefix {
+            pointer-events: none;
+            color: gray;
+            padding: 0 10px;
+        }
+
+        .gmail-suffix:focus,
+        .phone-prefix:focus {
+            pointer-events: auto;
+            color: black;
+        }
+    </style>
+</head>
+
+<body>
+
+<h2>Booking Form</h2>
+
+<form id="bookingForm" action="confirmation.html">
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName"><br><br>
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName"><br><br>
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob"><br><br>
+
+    <div class="gender-input">
+        <label for="gender" class="gender-label">Gender:</label>
+        <input type="radio" id="male" name="gender" value="male">
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female">
+        <label for="female">Female</label>
+    </div><br>
+
+    <label for="source">Starting Location:</label>
+    <select id="source" name="source">
+        <option value="Airport">Airport</option>
+        <option value="Train Station">Train Station</option>
+        <option value="Bus Terminal">Bus Terminal</option>
+    </select><br><br>
+
+    <label for="destination">Destination:</label>
+    <select id="destination" name="destination">
+        <option value="Hotel">Hotel</option>
+        <option value="Residence">Residence</option>
+        <option value="Office">Office</option>
+    </select><br><br>
+
+    <label for="time">Time:</label>
+    <input type="time" id="time" name="time"><br><br>
+
+    <label for="seats">Number of Seats:</label>
+    <select id="seats" name="seats">
+        <option value="1">1</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+    </select><br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Joepaul@gmail.com"><span class="gmail-suffix">@gmail.com</span><br><br>
+
+    <label for="phone">Phone:</label>
+    <span class="phone-prefix">+91</span><input type="tel" id="phone" name="phone" placeholder="Enter your phone number"><br><br>
+
+    <label for="address">Address:</label><br>
+    <textarea id="address" name="address" rows="4" cols="50"></textarea><br><br>
+
+    <input type="submit" value="Submit">
+    <input type="reset" value="Reset">
+</form>
+
+</body>
+</html>
